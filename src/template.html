@@ -18,7 +18,7 @@
   </header>
   <main>
     <div class="container">
-        <form class="builder">
+        <form>
           <div class="row">
             <label for="show" class="form-label">TV Shows</label>
             <select class="form-select" id="show" name="show" v-model="show">
@@ -29,17 +29,17 @@
 
           <div class="row">
             <label for="Season" class="form-label">Season</label>
-            <input type="number" class="form-control" id="Season" v-model="season">
+            <input type="number" class="form-control" id="Season" name="season">
           </div>
 
           <div class="row">
             <label for="Episode" class="form-label">Episode</label>
-            <input type="number" class="form-control" id="Episode" v-model="episode">
+            <input type="number" class="form-control" id="Episode" name="episode">
           </div>
 
           <div class="row">
             <label for="rating" class="form-label">Rating</label>
-            <select class="form-select" id="rating" name="rating" v-model="rating">
+            <select class="form-select" id="rating" name="rating" name="rating">
               <option value="1">1</option>
               <option value="2">2</option>
               <option selected="" value="3">3</option>
@@ -69,17 +69,13 @@
           </div>
           <div class="row">
             <label for="share" class="form-label">Share</label>
-            <select class="form-select" id="share" name="share" v-model="share">
+            <select class="form-select" id="share" name="share">
               <option selected="" value="0">False</option>
               <option value="1">True</option>
             </select>
           </div>
 
-          <button class="btn">Copy</button>
-
-          <a ref="github-link" :href="`https://github.com/quicoto/reviews/new/master/content/blog/tv-shows/?filename=tv-shows/${prettyShow}/${season}x${episode}/index.md`"
-              target="_blank">Create
-              file on Github</a>
+          <button type="submit" class="btn">Copy</button>
 
         </form>
     </div>
