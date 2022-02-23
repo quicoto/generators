@@ -36,7 +36,7 @@ share: ${share === 'true' ? 'true' : 'false'}
 ---
 
 ${comment ? comment : '*[No review was written for this episode]*'}
-`;
+`.trim();
   }
 
 
