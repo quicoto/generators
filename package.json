@@ -9,6 +9,7 @@
     "css": "sass --no-source-map --style=compressed src/styles.scss public/styles.css",
     "js": "esbuild src/main.js --bundle --outfile=public/main.min.js"
   },
+  "type":"module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/quicoto/reviews-generator.git"
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/quicoto/reviews-generator#readme",
   "dependencies": {
+    "@sindresorhus/slugify": "^2.1.0",
     "esbuild": "^0.14.23",
     "sass": "^1.49.8"
   }

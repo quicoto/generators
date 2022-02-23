@@ -4,158 +4,56 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name=”robots” content=”noindex, nofollow”>
+  <title>Review Generator</title>
+  <link rel="stylesheet" href="./styles.css?ver=2.0.0">
 </head>
 <body>
-
-  <header class="pb-4 p-3 bg-dark text-white">
+  <header>
     <div class="container">
       <h1>
-        Review Builder
+        Review Generator
       </h1>
     </div>
   </header>
+  <main>
+    <div class="container">
+        <form class="builder">
+          <div class="row">
+            <label for="show" class="form-label">TV Shows</label>
+            <select class="form-select" id="show" name="show" v-model="show">
+              <option selected="" value="0">Select TV Show</option>
+              %OPTIONS%
+            </select>
+          </div>
 
-  <main id="app" class="bg-dark text-white">
-    <div class="container text-center" v-show="loading">
-        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-    </div>
-    <div class="container pb-4" v-cloak>
-      <main class="row">
-        <div class="col-12">
-          <form class="builder">
-            <div class="mb-3">
-              <label for="show" class="form-label">TV Shows</label>
-              <select class="form-select" id="show" name="show" v-model="show">
-                <option selected="" value="0">Select TV Show</option>
-                <option value="3D Kanojo Real Girl">3D Kanojo Real Girl</option>
-                <option value="86 - Eighty Six">86 - Eighty Six</option>
-                <option value="Another Life">Another Life</option>
-                <option value="Araburu Kisetsu no Otome-domo yo">Araburu Kisetsu no Otome-domo yo</option>
-                <option value="Arrow">Arrow</option>
-                <option value="Atypical">Atypical</option>
-                <option value="Beastars">Beastars</option>
-                <option value="Beck: Mongolian Chop Squad">Beck: Mongolian Chop Squad</option>
-                <option value="Big Mouth">Big Mouth</option>
-                <option value="Black Clover">Black Clover</option>
-                <option value="Boku no Hero Academia">Boku no Hero Academia</option>
-                <option value="Boku no Tonari ni Ankoku Hakaishin ga Imasu">Boku no Tonari ni Ankoku Hakaishin ga Imasu</option>
-                <option value="Boruto - Naruto Next Generations">Boruto - Naruto Next Generations</option>
-                <option value="Cobra Kai">Cobra Kai</option>
-                <option value="Community">Community</option>
-                <option value="Cowboy Bebop (2021)">Cowboy Bebop (2021)</option>
-                <option value="D.P.">D.P.</option>
-                <option value="Dagashi Kashi">Dagashi Kashi</option>
-                <option value="Das Boot">Das Boot</option>
-                <option value="Debris">Debris</option>
-                <option value="Defending Jacob">Defending Jacob</option>
-                <option value="Final Space">Final Space</option>
-                <option value="Foundation">Foundation</option>
-                <option value="Fringe">Fringe</option>
-                <option value="Fugou Keiji Balance - UNLIMITED">Fugou Keiji Balance - UNLIMITED</option>
-                <option value="Gekkan Shoujo Nozaki-kun">Gekkan Shoujo Nozaki-kun</option>
-                <option value="Giri/Haji">Giri/Haji</option>
-                <option value="Great Pretender">Great Pretender</option>
-                <option value="Grey's Anatomy">Grey's Anatomy</option>
-                <option value="Haikyuu!!">Haikyuu!!</option>
-                <option value="Hataraku Saibou">Hataraku Saibou</option>
-                <option value="Hawkeye">Hawkeye</option>
-                <option value="Hoops">Hoops</option>
-                <option value="Ijiranaide Nagatoro-san">Ijiranaide Nagatoro-san</option>
-                <option value="Inside Job">Inside Job</option>
-                <option value="Into the Night">Into the Night</option>
-                <option value="Kaguya-sama wa Kokurasetai">Kaguya-sama wa Kokurasetai</option>
-                <option value="Kakushigoto">Kakushigoto</option>
-                <option value="Kanata no Astra">Kanata no Astra</option>
-                <option value="Kimetsu no Yaiba">Kimetsu no Yaiba</option>
-                <option value="Loki">Loki</option>
-                <option value="Lost">Lost</option>
-                <option value="Lucifer">Lucifer</option>
-                <option value="Lupin">Lupin</option>
-                <option value="Luther">Luther</option>
-                <option value="Major 2nd">Major 2nd</option>
-                <option value="My First First Love">My First First Love</option>
-                <option value="Mob Psycho 100">Mob Psycho 100</option>
-                <option value="Mugen no Juunin Immortal">Mugen no Juunin Immortal</option>
-                <option value="Odd Taxi">Odd Taxi</option>
-                <option value="Ookiku Furikabutte">Ookiku Furikabutte</option>
-                <option value="Our Beloved Summer">Our Beloved Summer</option>
-                <option value="Prison Playbook">Prison Playbook</option>
-                <option value="Racket Boys">Racket Boys</option>
-                <option value="Raised by Wolves">Raised by Wolves</option>
-                <option value="Record of Ragnarok">Record of Ragnarok</option>
-                <option value="Re-Main">Re-Main</option>
-                <option value="Rick and Morty">Rick and Morty</option>
-                <option value="Ryman's Club">Ryman's Club</option>
-                <option value="Seinfeld">Seinfeld</option>
-                <option value="Sex Education">Sex Education</option>
-                <option value="Squid Game">Squid Game</option>
-                <option value="South Park">South Park</option>
-                <option value="Snowpiercer">Snowpiercer</option>
-                <option value="Space Force">Space Force</option>
-                <option value="Spartacus: Blood and Sand">Spartacus: Blood and Sand</option>
-                <option value="Spartacus: Gods of the Arena">Spartacus: Gods of the Arena</option>
-                <option value="Spartacus: Vengeance">Spartacus: Vengeance</option>
-                <option value="Star Trek: Discovery">Star Trek: Discovery</option>
-                <option value="Star Trek: Lower Decks">Star Trek: Lower Decks</option>
-                <option value="Stargate SG-1">Stargate SG-1</option>
-                <option value="Station 19">Station 19</option>
-                <option value="Suits">Suits</option>
-                <option value="Sword Art Online">Sword Art Online</option>
-                <option value="Sword Art Online - Alicization">Sword Art Online - Alicization</option>
-                <option value="The Book of Boba Fett">The Book of Boba Fett</option>
-                <option value="The Comey Rule">The Comey Rule</option>
-                <option value="The Daily Life of the Immortal King">The Daily Life of the Immortal King</option>
-                <option value="The God of High School">The God of High School</option>
-                <option value="The Good Doctor">The Good Doctor</option>
-                <option value="The Last Dance">The Last Dance</option>
-                <option value="The Looming Tower">The Looming Tower</option>
-                <option value="The Mandalorian">The Mandalorian</option>
-                <option value="The Night Manager">The Night Manager</option>
-                <option value="The Office">The Office</option>
-                <option value="The Queen's Gambit">The Queen's Gambit</option>
-                <option value="The Umbrella Academy">The Umbrella Academy</option>
-                <option value="Tokyo Revengers">Tokyo Revengers</option>
-                <option value="Tsurezure Children">Tsurezure Children</option>
-                <option value="Tsurune">Tsurune</option>
-                <option value="UPLOAD">UPLOAD</option>
-                <option value="Uchi Tama - Uchi no Tama Shirimasen ka">Uchi Tama - Uchi no Tama Shirimasen ka</option>
-                <option value="Veep">Veep</option>
-                <option value="Watashi ga Motete Dousunda">Watashi ga Motete Dousunda</option>
-                <option value="White Collar">White Collar</option>
-                <option value="Where Your Eyes Linger">Where Your Eyes Linger</option>
-                <option value="Wotaku ni Koi wa Muzukashii">Wotaku ni Koi wa Muzukashii</option>
-                <option value="Yahari Ore no Seishun Love Come wa Machigatteiru">Yahari Ore no Seishun Love Come wa Machigatteiru</option>
-                <option value="Yahari Ore no Seishun Love Come wa Machigatteiru Zoku">Yahari Ore no Seishun Love Come wa Machigatteiru Zoku</option>
-              </select></div>
+          <div class="row">
+            <label for="Season" class="form-label">Season</label>
+            <input type="number" class="form-control" id="Season" v-model="season">
+          </div>
 
-            <div class="mb-3">
-              <label for="Season" class="form-label">Season</label>
-              <input type="number" class="form-control" id="Season" v-model="season">
-            </div>
+          <div class="row">
+            <label for="Episode" class="form-label">Episode</label>
+            <input type="number" class="form-control" id="Episode" v-model="episode">
+          </div>
 
-            <div class="mb-3">
-              <label for="Episode" class="form-label">Episode</label>
-              <input type="number" class="form-control" id="Episode" v-model="episode">
-            </div>
-
-            <div class="mb-3">
-              <label for="rating" class="form-label">Rating</label>
-              <select class="form-select" id="rating" name="rating" v-model="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option selected="" value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="Comment" class="form-label">Comment</label>
-              <textarea class="form-control" id="Comment" rows="3" name="comment" v-model="comment"></textarea>
-            </div>
-            <div class="mb-3">
-              <label for="markdown" class="form-label">Markdown</label>
-              <textarea readonly="" class="form-control" id="markdown" rows="3" name="markdown">---
+          <div class="row">
+            <label for="rating" class="form-label">Rating</label>
+            <select class="form-select" id="rating" name="rating" v-model="rating">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option selected="" value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="row">
+            <label for="Comment" class="form-label">Comment</label>
+            <textarea class="form-control" id="Comment" rows="3" name="comment" v-model="comment"></textarea>
+          </div>
+          <div class="row">
+            <label for="markdown" class="form-label">Markdown</label>
+            <textarea readonly="" class="form-control" id="markdown" rows="3" name="markdown">---
   type: series
   title: "{{ show }} {{ season }}x{{ episode }}"
   date: "{{date}}"
@@ -168,33 +66,29 @@
   ---
 
   {{ comment ? comment : '*[No review was written for this episode]*'}}</textarea>
-            </div>
-            <div class="mb-3">
-              <label for="share" class="form-label">Share</label>
-              <select class="form-select" id="share" name="share" v-model="share">
-                <option selected="" value="0">False</option>
-                <option value="1">True</option>
-              </select>
-            </div>
-            <div class="actions text-center">
-              <div class="d-grid gap-2 mb-3">
-                <button v-on:click="copy" class="btn btn-primary" :disabled="!episode || !season || show == '0'">Copy</button>
-              </div>
-              <a ref="github-link" :href="`https://github.com/quicoto/reviews/new/master/content/blog/tv-shows/?filename=tv-shows/${prettyShow}/${season}x${episode}/index.md`"
-                target="_blank">Create
-                file on Github</a>
-            </div>
-          </form>
-        </div>
-      </main>
+          </div>
+          <div class="row">
+            <label for="share" class="form-label">Share</label>
+            <select class="form-select" id="share" name="share" v-model="share">
+              <option selected="" value="0">False</option>
+              <option value="1">True</option>
+            </select>
+          </div>
+
+          <button class="btn">Copy</button>
+
+          <a ref="github-link" :href="`https://github.com/quicoto/reviews/new/master/content/blog/tv-shows/?filename=tv-shows/${prettyShow}/${season}x${episode}/index.md`"
+              target="_blank">Create
+              file on Github</a>
+
+        </form>
     </div>
   </main>
-
-  <footer class="p-4 pb-3 bg-dark text-white">
+  <footer>
     <div class="container">
-      Review generator for <a class="link-light" href="https://quicoto.github.io/reviews/">Ricard's Reviews</a>
+      With ❤️ from <a href="https://ricard.blog/" title="Ricard Torres Blog">Ricard Torres</a>
     </div>
   </footer>
-
+  <script src="./main.min.js?ver=2.0.0" defer></script>
 </body>
 </html>
