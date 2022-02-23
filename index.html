@@ -21,8 +21,8 @@
         <form>
           <div class="row">
             <label for="show" class="form-label">TV Shows</label>
-            <select class="form-select" id="show" name="show" v-model="show">
-              <option selected="" value="0">Select TV Show</option>
+            <select class="form-select" id="show" name="show" required>
+              <option selected="" value="">Select TV Show</option>
               <option value="3-d-kanojo-real-girl">3D Kanojo Real Girl</option>
 <option value="86-eighty-six">86 - Eighty Six</option>
 <option value="another-life">Another Life</option>
@@ -127,12 +127,12 @@
 
           <div class="row">
             <label for="Season" class="form-label">Season</label>
-            <input type="number" class="form-control" id="Season" name="season">
+            <input type="number" class="form-control" id="Season" name="season" required>
           </div>
 
           <div class="row">
             <label for="Episode" class="form-label">Episode</label>
-            <input type="number" class="form-control" id="Episode" name="episode">
+            <input type="number" class="form-control" id="Episode" name="episode" required>
           </div>
 
           <div class="row">
@@ -147,34 +147,17 @@
           </div>
           <div class="row">
             <label for="Comment" class="form-label">Comment</label>
-            <textarea class="form-control" id="Comment" rows="3" name="comment" v-model="comment"></textarea>
-          </div>
-          <div class="row">
-            <label for="markdown" class="form-label">Markdown</label>
-            <textarea readonly="" class="form-control" id="markdown" rows="3" name="markdown">---
-  type: series
-  title: "{{ show }} {{ season }}x{{ episode }}"
-  date: "{{date}}"
-  name: "{{ show }}"
-  season: {{ season }}
-  episode: {{ episode }}
-  rating: {{ rating }}
-  ratingEmoji: "{{ '⭐️'.repeat(rating) }}"
-  share: {{ share ? 'true' : 'false' }}
-  ---
-
-  {{ comment ? comment : '*[No review was written for this episode]*'}}</textarea>
+            <textarea class="form-control" id="Comment" rows="3" name="comment"></textarea>
           </div>
           <div class="row">
             <label for="share" class="form-label">Share</label>
             <select class="form-select" id="share" name="share">
-              <option selected="" value="0">False</option>
-              <option value="1">True</option>
+              <option selected="" value="false">False</option>
+              <option value="true">True</option>
             </select>
           </div>
 
           <button type="submit" class="btn">Copy</button>
-
         </form>
     </div>
   </main>
