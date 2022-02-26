@@ -3,7 +3,7 @@
 
   /**
    * @param  {object} config
-   * @param  {string} config.show
+   * @param  {string} config.showFormatted
    * @param  {string} config.season
    * @param  {string} config.episode
    * @param  {string} config.date
@@ -13,7 +13,7 @@
    */
   function _markdown(config) {
     const {
-      show,
+      showFormatted,
       season,
       episode,
       date,
@@ -25,9 +25,9 @@
     return `
 ---
 type: series
-title: "${show} ${season}x${episode}"
+title: "${showFormatted} ${season}x${episode}"
 date: "${date}"
-name: "${show}"
+name: "${showFormatted}"
 season: ${+season}
 episode: ${+episode}
 rating: ${+rating}
@@ -69,13 +69,14 @@ ${comment ? comment : '*[No review was written for this episode]*'}
 
     const formData = new FormData(event.target);
     const show = formData.get('show');
+    const showFormatted = document.querySelector("[name='show']").selectedOptions[0].innerText;
     const season = formData.get('season');
     const episode = formData.get('episode');
     const rating = formData.get('rating');
     const comment = formData.get('comment');
     const share = formData.get('share');
     const content = _markdown({
-      show,
+      showFormatted,
       season,
       episode,
       date: _formatDate(),
