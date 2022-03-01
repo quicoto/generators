@@ -7,7 +7,7 @@
     "build": "npm run css & npm run js && npm run html",
     "html": "node index.js",
     "css": "sass --no-source-map --style=compressed src/styles.scss public/styles.css",
-    "js": "esbuild src/main.js --bundle --outfile=public/main.min.js"
+    "js": "esbuild src/main.js --bundle --minify --outfile=public/main.min.js"
   },
   "type":"module",
   "repository": {
