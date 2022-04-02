@@ -1,15 +1,16 @@
 {
   "name": "reviews-generator",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Easy copy and paste reviews for my Reviews site",
   "main": "main.js",
   "scripts": {
-    "build": "npm run css & npm run js && npm run html",
+    "build": "npm run css & npm run js && npm run html && npm run assets",
+    "assets": "node assets.js",
     "html": "node index.js",
     "css": "sass --no-source-map --style=compressed src/styles.scss public/styles.css",
     "js": "esbuild src/main.js --bundle --minify --outfile=public/main.min.js"
   },
-  "type":"module",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/quicoto/reviews-generator.git"
@@ -23,6 +24,7 @@
   "dependencies": {
     "@sindresorhus/slugify": "^2.1.0",
     "esbuild": "^0.14.23",
+    "fs-extra": "^10.0.1",
     "sass": "^1.49.8"
   }
 }

@@ -1,14 +1,17 @@
 import slugify from '@sindresorhus/slugify';
 import * as fs from 'fs';
 
-
 // Create the requried folders
 fs.mkdir(`./public`, () => {});
 
 function createFile(fileName, data) {
   fs.writeFile(fileName, data, (err) => {
     if (!err) {
+      const targetContent = fs.readFileSync(fileName, 'utf-8');
+
       console.log('File created: ' + fileName);
+
+      fs.writeFileSync(fileName, targetContent.replaceAll('%VERSION%', process.env.npm_package_version));
     }
   });
 }

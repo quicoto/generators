@@ -1,16 +1,17 @@
 {
   "name": "reviews-generator",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "reviews-generator",
-      "version": "2.0.1",
+      "version": "3.0.0",
       "license": "MIT",
       "dependencies": {
         "@sindresorhus/slugify": "^2.1.0",
         "esbuild": "^0.14.23",
+        "fs-extra": "^10.0.1",
         "sass": "^1.49.8"
       }
     },
@@ -441,6 +442,19 @@
         "node": ">=8"
       }
     },
+    "node_modules/fs-extra": {
+      "version": "10.0.1",
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-10.0.1.tgz",
+      "integrity": "sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==",
+      "dependencies": {
+        "graceful-fs": "^4.2.0",
+        "jsonfile": "^6.0.1",
+        "universalify": "^2.0.0"
+      },
+      "engines": {
+        "node": ">=12"
+      }
+    },
     "node_modules/fsevents": {
       "version": "2.3.2",
       "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz",
@@ -464,6 +478,11 @@
       "engines": {
         "node": ">= 6"
       }
+    },
+    "node_modules/graceful-fs": {
+      "version": "4.2.9",
+      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz",
+      "integrity": "sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ=="
     },
     "node_modules/immutable": {
       "version": "4.0.0",
@@ -506,6 +525,17 @@
       "integrity": "sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng==",
       "engines": {
         "node": ">=0.12.0"
+      }
+    },
+    "node_modules/jsonfile": {
+      "version": "6.1.0",
+      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz",
+      "integrity": "sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==",
+      "dependencies": {
+        "universalify": "^2.0.0"
+      },
+      "optionalDependencies": {
+        "graceful-fs": "^4.1.6"
       }
     },
     "node_modules/lodash.deburr": {
@@ -576,6 +606,14 @@
       },
       "engines": {
         "node": ">=8.0"
+      }
+    },
+    "node_modules/universalify": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz",
+      "integrity": "sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ==",
+      "engines": {
+        "node": ">= 10.0.0"
       }
     }
   },
@@ -788,6 +826,16 @@
         "to-regex-range": "^5.0.1"
       }
     },
+    "fs-extra": {
+      "version": "10.0.1",
+      "resolved": "https://registry.npmjs.org/fs-extra/-/fs-extra-10.0.1.tgz",
+      "integrity": "sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==",
+      "requires": {
+        "graceful-fs": "^4.2.0",
+        "jsonfile": "^6.0.1",
+        "universalify": "^2.0.0"
+      }
+    },
     "fsevents": {
       "version": "2.3.2",
       "resolved": "https://registry.npmjs.org/fsevents/-/fsevents-2.3.2.tgz",
@@ -801,6 +849,11 @@
       "requires": {
         "is-glob": "^4.0.1"
       }
+    },
+    "graceful-fs": {
+      "version": "4.2.9",
+      "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.9.tgz",
+      "integrity": "sha512-NtNxqUcXgpW2iMrfqSfR73Glt39K+BLwWsPs94yR63v45T0Wbej7eRmL5cWfwEgqXnmjQp3zaJTshdRW/qC2ZQ=="
     },
     "immutable": {
       "version": "4.0.0",
@@ -832,6 +885,15 @@
       "version": "7.0.0",
       "resolved": "https://registry.npmjs.org/is-number/-/is-number-7.0.0.tgz",
       "integrity": "sha512-41Cifkg6e8TylSpdtTpeLVMqvSBEVzTttHvERD741+pnZ8ANv0004MRL43QKPDlK9cGvNp6NZWZUBlbGXYxxng=="
+    },
+    "jsonfile": {
+      "version": "6.1.0",
+      "resolved": "https://registry.npmjs.org/jsonfile/-/jsonfile-6.1.0.tgz",
+      "integrity": "sha512-5dgndWOriYSm5cnYaJNhalLNDKOqFwyDB/rr1E9ZsGciGvKPs8R2xYGCacuf3z6K1YKDz182fd+fY3cn3pMqXQ==",
+      "requires": {
+        "graceful-fs": "^4.1.6",
+        "universalify": "^2.0.0"
+      }
     },
     "lodash.deburr": {
       "version": "4.1.0",
@@ -878,6 +940,11 @@
       "requires": {
         "is-number": "^7.0.0"
       }
+    },
+    "universalify": {
+      "version": "2.0.0",
+      "resolved": "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz",
+      "integrity": "sha512-hAZsKq7Yy11Zu1DE0OzWjw7nnLZmJZYTDZZyEFHZdUhV8FkH5MCfoU1XMaxXovpyW5nq5scPqq0ZDP9Zyl04oQ=="
     }
   }
 }
