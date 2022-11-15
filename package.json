@@ -1,14 +1,18 @@
 {
   "name": "reviews-generator",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Easy copy and paste reviews for my Reviews site",
   "main": "main.js",
   "scripts": {
-    "build": "npm run css & npm run js && npm run html && npm run assets",
-    "assets": "node assets.js",
-    "html": "node index.js",
-    "css": "sass --no-source-map --style=compressed src/styles.scss public/styles.css",
-    "js": "esbuild src/main.js --bundle --minify --outfile=public/main.min.js"
+    "build": "node create-public.js && node assets.js && npm run reviews && npm run gists",
+    "reviews": "npm run reviews:html && npm run reviews:css && npm run reviews:js",
+    "reviews:html": "node reviews/index.js",
+    "reviews:css": "sass --no-source-map --style=compressed reviews/src/styles.scss public/reviews/styles.css",
+    "reviews:js": "esbuild reviews/src/main.js --bundle --minify --outfile=public/reviews/main.min.js",
+    "gists": "npm run gists:html && npm run gists:css && npm run gists:js",
+    "gists:html": "node gists/index.js",
+    "gists:css": "sass --no-source-map --style=compressed gists/src/styles.scss public/gists/styles.css",
+    "gists:js": "esbuild gists/src/main.js --bundle --minify --outfile=public/gists/main.min.js"
   },
   "type": "module",
   "repository": {

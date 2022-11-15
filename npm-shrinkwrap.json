@@ -1,12 +1,12 @@
 {
   "name": "reviews-generator",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "reviews-generator",
-      "version": "3.0.0",
+      "version": "4.0.0",
       "license": "MIT",
       "dependencies": {
         "@sindresorhus/slugify": "^2.1.0",
