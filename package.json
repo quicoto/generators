@@ -1,5 +1,5 @@
 {
-  "name": "reviews-generator",
+  "name": "generators",
   "version": "4.0.0",
   "description": "Easy copy and paste reviews for my Reviews site",
   "main": "main.js",
@@ -17,14 +17,14 @@
   "type": "module",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/quicoto/reviews-generator.git"
+    "url": "git+https://github.com/quicoto/generators.git"
   },
   "author": "Ricard Torres",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/quicoto/reviews-generator/issues"
+    "url": "https://github.com/quicoto/generators/issues"
   },
-  "homepage": "https://github.com/quicoto/reviews-generator#readme",
+  "homepage": "https://github.com/quicoto/generators#readme",
   "dependencies": {
     "@sindresorhus/slugify": "^2.1.0",
     "esbuild": "^0.14.23",

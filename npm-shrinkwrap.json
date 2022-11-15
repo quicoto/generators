@@ -1,11 +1,11 @@
 {
-  "name": "reviews-generator",
+  "name": "generators",
   "version": "4.0.0",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
-      "name": "reviews-generator",
+      "name": "generators",
       "version": "4.0.0",
       "license": "MIT",
       "dependencies": {
