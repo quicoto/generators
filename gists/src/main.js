@@ -67,7 +67,7 @@ ${code}
   }
 
   function _handleSubmit(event) {
-    let URL = 'https://github.com/quicoto/gists/new/main/content/writting/?filename=writting/%DATE%.md';
+    let URL = 'https://github.com/quicoto/gists/new/main/content/writing/?filename=writing/%DATE%.md';
 
     event.preventDefault();
 
