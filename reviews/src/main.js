@@ -46,7 +46,7 @@
       let title = showFormatted
 
       if (type !== 'manga') {
-        title += `${season}x${episode}`
+        title += ` ${season}x${episode}`
       }
 
       return title
