@@ -48,6 +48,8 @@
       if (type !== 'manga') {
         title += `${season}x${episode}`
       }
+
+      return title
     }
 
     return `
