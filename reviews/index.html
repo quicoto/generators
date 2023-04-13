@@ -31,44 +31,51 @@
     <div class="container">
         <form>
           <div class="row">
-            <label for="show" class="form-label">TV Shows</label>
+            <label for="show" class="form-label">Manga / TV Shows</label>
             <select class="form-select" id="show" name="show" required>
-              <option selected="" value="">Select TV Show</option>
-              <option value="black-clover">Black Clover</option>
-<option value="bleach">Bleach</option>
-<option value="boku-no-hero-academia">Boku no Hero Academia</option>
-<option value="boston-legal">Boston Legal</option>
-<option value="bungou-stray-dogs">Bungou Stray Dogs</option>
-<option value="cool-doji-danshi">Cool Doji Danshi</option>
-<option value="for-all-mankind">For All Mankind</option>
-<option value="gokushufudou">Gokushufudou</option>
-<option value="jigokuraku">Jigokuraku</option>
-<option value="kaguya-sama-wa-kokurasetai">Kaguya-sama wa Kokurasetai</option>
-<option value="kimetsu-no-yaiba">Kimetsu no Yaiba</option>
-<option value="loki">Loki</option>
-<option value="nande-koko-ni-sensei-ga">Nande Koko ni Sensei ga</option>
-<option value="rick-and-morty">Rick and Morty</option>
-<option value="saturday-night-live">Saturday Night Live</option>
-<option value="slow-horses">Slow Horses</option>
-<option value="solar-opposites">Solar Opposites</option>
-<option value="south-park">South Park</option>
-<option value="star-trek-lower-decks">Star Trek: Lower Decks</option>
-<option value="tomo-chan-wa-onnanoko">Tomo-chan wa Onnanoko!</option>
-<option value="the-capture">The Capture</option>
-<option value="the-last-of-us">The Last of Us</option>
-<option value="the-mandalorian">The Mandalorian</option>
-<option value="yamada-kun-to-lv999-no-koi-wo-suru">Yamada-kun to Lv999 no Koi wo Suru</option>
+              <option selected="" value="">Select series</option>
+              <optgroup label="TV Shows"><option data-type="tv-shows" value="black-clover">Black Clover</option>
+<option data-type="tv-shows" value="bleach">Bleach</option>
+<option data-type="tv-shows" value="boku-no-hero-academia">Boku no Hero Academia</option>
+<option data-type="tv-shows" value="boston-legal">Boston Legal</option>
+<option data-type="tv-shows" value="bungou-stray-dogs">Bungou Stray Dogs</option>
+<option data-type="tv-shows" value="cool-doji-danshi">Cool Doji Danshi</option>
+<option data-type="tv-shows" value="for-all-mankind">For All Mankind</option>
+<option data-type="tv-shows" value="gokushufudou">Gokushufudou</option>
+<option data-type="tv-shows" value="jigokuraku">Jigokuraku</option>
+<option data-type="tv-shows" value="kaguya-sama-wa-kokurasetai">Kaguya-sama wa Kokurasetai</option>
+<option data-type="tv-shows" value="kimetsu-no-yaiba">Kimetsu no Yaiba</option>
+<option data-type="tv-shows" value="loki">Loki</option>
+<option data-type="tv-shows" value="nande-koko-ni-sensei-ga">Nande Koko ni Sensei ga</option>
+<option data-type="tv-shows" value="rick-and-morty">Rick and Morty</option>
+<option data-type="tv-shows" value="saturday-night-live">Saturday Night Live</option>
+<option data-type="tv-shows" value="slow-horses">Slow Horses</option>
+<option data-type="tv-shows" value="solar-opposites">Solar Opposites</option>
+<option data-type="tv-shows" value="south-park">South Park</option>
+<option data-type="tv-shows" value="star-trek-lower-decks">Star Trek: Lower Decks</option>
+<option data-type="tv-shows" value="tomo-chan-wa-onnanoko">Tomo-chan wa Onnanoko!</option>
+<option data-type="tv-shows" value="the-capture">The Capture</option>
+<option data-type="tv-shows" value="the-last-of-us">The Last of Us</option>
+<option data-type="tv-shows" value="the-mandalorian">The Mandalorian</option>
+<option data-type="tv-shows" value="yamada-kun-to-lv999-no-koi-wo-suru">Yamada-kun to Lv999 no Koi wo Suru</option></optgroup><optgroup label="Manga"><option data-type="manga" value="chainsaw-man">Chainsaw Man</option>
+<option data-type="manga" value="yamada-kun-to-lv999-no-koi-wo-suru">Yamada-kun to Lv999 no Koi wo Suru</option>
+<option data-type="manga" value="tenmaku-cinema">Tenmaku Cinema</option></optgroup>
             </select>
           </div>
 
-          <div class="row">
+          <div class="row" id="season-wrapper">
             <label for="Season" class="form-label">Season</label>
-            <input type="number" class="form-control" id="Season" name="season" required>
+            <input type="number" class="form-control" id="Season" name="season">
           </div>
 
-          <div class="row">
+          <div class="row" id="episode-wrapper">
             <label for="Episode" class="form-label">Episode</label>
-            <input type="number" class="form-control" id="Episode" name="episode" required>
+            <input type="number" class="form-control" id="Episode" name="episode">
+          </div>
+
+          <div class="row" id="volume-wrapper" hidden>
+            <label for="Volume" class="form-label">Volume</label>
+            <input type="number" class="form-control" id="Volume" name="volume">
           </div>
 
           <div class="row">
