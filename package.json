@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/quicoto/generators#readme",
   "dependencies": {
-    "@sindresorhus/slugify": "^2.1.0",
-    "esbuild": "^0.14.23",
-    "fs-extra": "^10.0.1",
-    "sass": "^1.49.8"
+    "@sindresorhus/slugify": "2.1.0",
+    "esbuild": "^0.17.16",
+    "fs-extra": "^11.1.1",
+    "sass": "^1.62.0"
   }
 }
