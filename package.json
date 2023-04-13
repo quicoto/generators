@@ -9,6 +9,7 @@
     "reviews:html": "node reviews/index.js",
     "reviews:css": "sass --no-source-map --style=compressed reviews/src/styles.scss public/reviews/styles.css",
     "reviews:js": "esbuild reviews/src/main.js --bundle --minify --outfile=public/reviews/main.min.js",
+    "dev:reviews:js": "esbuild reviews/src/main.js --bundle --outfile=public/reviews/main.min.js --watch",
     "gists": "npm run gists:html && npm run gists:css && npm run gists:js",
     "gists:html": "node gists/index.js",
     "gists:css": "sass --no-source-map --style=compressed gists/src/styles.scss public/gists/styles.css",

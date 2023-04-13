@@ -31,21 +31,26 @@
     <div class="container">
         <form>
           <div class="row">
-            <label for="show" class="form-label">TV Shows</label>
+            <label for="show" class="form-label">Manga / TV Shows</label>
             <select class="form-select" id="show" name="show" required>
-              <option selected="" value="">Select TV Show</option>
+              <option selected="" value="">Select series</option>
               %OPTIONS%
             </select>
           </div>
 
-          <div class="row">
+          <div class="row" id="season-wrapper">
             <label for="Season" class="form-label">Season</label>
-            <input type="number" class="form-control" id="Season" name="season" required>
+            <input type="number" class="form-control" id="Season" name="season">
           </div>
 
-          <div class="row">
+          <div class="row" id="episode-wrapper">
             <label for="Episode" class="form-label">Episode</label>
-            <input type="number" class="form-control" id="Episode" name="episode" required>
+            <input type="number" class="form-control" id="Episode" name="episode">
+          </div>
+
+          <div class="row" id="volume-wrapper" hidden>
+            <label for="Volume" class="form-label">Volume</label>
+            <input type="number" class="form-control" id="Volume" name="volume">
           </div>
 
           <div class="row">
