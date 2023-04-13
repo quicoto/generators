@@ -42,10 +42,18 @@
       return text
     }
 
+    function titleFormatted() {
+      let title = showFormatted
+
+      if (type !== 'manga') {
+        title += `${season}x${episode}`
+      }
+    }
+
     return `
 ---
 type: ${type === 'manga' ? 'manga' : 'series'}
-title: "${showFormatted} ${season}x${episode}"
+title: "${titleFormatted()}"
 date: "${date}"
 name: "${showFormatted}"
 ${episodeOrVolume()}
