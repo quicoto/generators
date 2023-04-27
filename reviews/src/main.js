@@ -17,14 +17,14 @@
       showFormatted,
       season,
       episode,
-      volume,
+      chapter,
       date,
       rating,
       comment,
       share
     } = config
 
-    function episodeOrVolume() {
+    function episodeOrchapter() {
       let text = '';
 
       if (+season) {
@@ -35,8 +35,8 @@
         text += `\nepisode: ${+episode}`
       }
 
-      if (+volume) {
-        text += `volume: ${+volume}`
+      if (+chapter) {
+        text += `chapter: ${+chapter}`
       }
 
       return text
@@ -58,13 +58,13 @@ type: ${type === 'manga' ? 'manga' : 'series'}
 title: "${titleFormatted()}"
 date: "${date}"
 name: "${showFormatted}"
-${episodeOrVolume()}
+${episodeOrchapter()}
 rating: ${+rating}
 ratingEmoji: ${'⭐️'.repeat(+rating)}
 share: ${share === 'true' ? 'true' : 'false'}
 ---
 
-${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'volume' : 'episode'}]*`}
+${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'chapter' : 'episode'}]*`}
 `.trim();
   }
 
@@ -74,7 +74,7 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'vo
     _$.show = document.querySelector("[name='show']");
     _$.seasonWrapper = document.querySelector('#season-wrapper');
     _$.episodeWrapper = document.querySelector('#episode-wrapper');
-    _$.volumeWrapper = document.querySelector('#volume-wrapper');
+    _$.chapterWrapper = document.querySelector('#chapter-wrapper');
   }
 
   function _formatDate() {
@@ -102,12 +102,12 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'vo
     const show = formData.get('show');
     const selectedShow = document.querySelector("[name='show']").selectedOptions[0]
     const commonPath = "https://github.com/quicoto/reviews/new/master/content/blog/"
-    const folder = selectedShow.dataset.type === 'manga' ? '%VOLUME%' : '%SEASON%x%EPISODE%';
+    const folder = selectedShow.dataset.type === 'manga' ? '%chapter%' : '%SEASON%x%EPISODE%';
     let URL = `${commonPath}${selectedShow.dataset.type}/?filename=${selectedShow.dataset.type}/%SHOW%/${folder}/index.md`;
     const showFormatted = selectedShow.innerText;
     const season = formData.get('season');
     const episode = formData.get('episode');
-    const volume = formData.get('volume');
+    const chapter = formData.get('chapter');
     const rating = formData.get('rating');
     const comment = formData.get('comment');
     const share = formData.get('share');
@@ -116,7 +116,7 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'vo
       type: selectedShow.dataset.type,
       season,
       episode,
-      volume,
+      chapter,
       date: _formatDate(),
       rating,
       comment,
@@ -126,7 +126,7 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'vo
     URL = URL.replace('%SHOW%', show);
     URL = URL.replace('%SEASON%', season);
     URL = URL.replace('%EPISODE%', episode);
-    URL = URL.replace('%VOLUME%', volume);
+    URL = URL.replace('%chapter%', chapter);
 
     navigator.clipboard.writeText(content);
 
@@ -139,11 +139,11 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'vo
     if (show.dataset.type === 'manga') {
       _$.seasonWrapper.setAttribute('hidden', true);
       _$.episodeWrapper.setAttribute('hidden', true);
-      _$.volumeWrapper.removeAttribute('hidden');
+      _$.chapterWrapper.removeAttribute('hidden');
     } else if (show.dataset.type === 'tv-shows') {
       _$.seasonWrapper.removeAttribute('hidden');
       _$.episodeWrapper.removeAttribute('hidden');
-      _$.volumeWrapper.setAttribute('hidden', true);
+      _$.chapterWrapper.setAttribute('hidden', true);
     }
   }
 
