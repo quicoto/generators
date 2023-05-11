@@ -103,7 +103,7 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'ch
     const selectedShow = document.querySelector("[name='show']").selectedOptions[0]
     const commonPath = "https://github.com/quicoto/reviews/new/master/content/blog/"
     const folder = selectedShow.dataset.type === 'manga' ? '%chapter%' : '%SEASON%x%EPISODE%';
-    let URL = `${commonPath}${selectedShow.dataset.type}/?filename=${selectedShow.dataset.type}/%SHOW%/${folder}/index.md`;
+    let URL = `${commonPath}${selectedShow.dataset.type}/?filename=%SHOW%/${folder}/index.md`;
     const showFormatted = selectedShow.innerText;
     const season = formData.get('season');
     const episode = formData.get('episode');
