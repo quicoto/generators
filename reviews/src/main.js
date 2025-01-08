@@ -9,7 +9,6 @@
    * @param  {string} config.date
    * @param  {string} config.rating
    * @param  {string} config.comment
-   * @param  {string} config.share
    */
   function _markdown(config) {
     const {
@@ -20,8 +19,7 @@
       chapter,
       date,
       rating,
-      comment,
-      share
+      comment
     } = config
 
     function episodeOrchapter() {
@@ -61,7 +59,6 @@ name: "${showFormatted}"
 ${episodeOrchapter()}
 rating: ${+rating}
 ratingEmoji: ${'⭐️'.repeat(+rating)}
-share: ${share === 'true' ? 'true' : 'false'}
 ---
 
 ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'chapter' : 'episode'}]*`}
@@ -110,7 +107,6 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'ch
     const chapter = formData.get('chapter');
     const rating = formData.get('rating');
     const comment = formData.get('comment');
-    const share = formData.get('share');
     const content = _markdown({
       showFormatted,
       type: selectedShow.dataset.type,
@@ -119,8 +115,7 @@ ${comment ? comment : `*[No review was written for this ${type === 'manga' ? 'ch
       chapter,
       date: _formatDate(),
       rating,
-      comment,
-      share
+      comment
     });
 
     URL = URL.replace('%SHOW%', show);
