@@ -1,10 +1,6 @@
 {  "shows": [
-    "Ace of Diamond",
-    "Alien: Earth",
     "Bakuman",
     "Blue Exorcist",
-    "Boku no Hero Academia: Vigilantes",
-    "Butterfly",
     "Dan Da Dan",
     "Enen no Shouboutai",
     "Free!",
@@ -12,24 +8,15 @@
     "Gachiakuta",
     "Kaiju No. 8",
     "Kaoru Hana wa Rin to Saku",
-    "Kusuriya no Hitorigoto",
     "Medaka Kuroiwa is Impervious to My Charms",
     "My Dress-Up Darling",
     "Naruto",
-    "Once Upon a Small Town",
     "Rick and Morty",
     "Sakamoto Days",
     "South Park",
-    "Severance",
-    "Squid Game",
-    "The Winning Try",
     "Tokyo Revengers",
-    "To Be Hero X",
     "Tougen Anki",
-    "Untamed",
-    "Wind Breaker",
-    "Welcome to the Outcast's Restaurant!",
-    "Witch Watch"
+    "Welcome to the Outcast's Restaurant!"
   ],
   "manga": ["test"]
 }
