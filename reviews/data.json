@@ -1,12 +1,8 @@
 {  "shows": [
-    "Bakuman",
     "Blue Exorcist",
     "Boku no Hero Academia",
-    "Boots",
-    "Countdown",
     "Dan Da Dan",
     "Daikaichi",
-    "Enen no Shouboutai",
     "Free!",
     "Futurama",
     "Gachiakuta",
@@ -14,22 +10,16 @@
     "Haunted Hotel",
     "Kaiju No. 8",
     "Kaoru Hana wa Rin to Saku",
-    "Let's Play",
     "Medaka Kuroiwa is Impervious to My Charms",
     "My Friend's Little Sister Has It In for Me!",
-    "Mizu Zokusei no Mahoutsukai",
     "Mobland",
-    "My Dress-Up Darling",
     "Naruto",
     "Rick and Morty",
     "Sakamoto Days",
     "South Park",
-    "The Diplomat",
-    "The Terminal List: Dark Wolf",
     "Tokyo Revengers",
     "Tougen Anki",
-    "Watashi wo Tabetai, Hitodenashi",
-    "Welcome to the Outcast's Restaurant!"
+    "Watashi wo Tabetai, Hitodenashi"
   ],
   "manga": ["test"]
 }
