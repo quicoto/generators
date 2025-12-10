@@ -28,7 +28,7 @@ season:
 episode:
 rating: ${+rating}
 ratingEmoji: ${'⭐️'.repeat(+rating)}
-share: true
+share: false
 ---
 
 ${comment ? comment : ''}
