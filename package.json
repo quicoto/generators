@@ -1,10 +1,10 @@
 {
   "name": "generators",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Easy copy and paste reviews for my Reviews site",
   "main": "main.js",
   "scripts": {
-    "build": "node create-public.js && node assets.js && npm run reviews && npm run gists",
+    "build": "node create-public.js && node assets.js && npm run reviews && npm run gists && npm run movies",
     "reviews": "npm run reviews:html && npm run reviews:css && npm run reviews:js",
     "reviews:html": "node reviews/index.js",
     "reviews:css": "sass --no-source-map --style=compressed reviews/src/styles.scss public/reviews/styles.css",
@@ -13,7 +13,12 @@
     "gists": "npm run gists:html && npm run gists:css && npm run gists:js",
     "gists:html": "node gists/index.js",
     "gists:css": "sass --no-source-map --style=compressed gists/src/styles.scss public/gists/styles.css",
-    "gists:js": "esbuild gists/src/main.js --bundle --minify --outfile=public/gists/main.min.js"
+    "gists:js": "esbuild gists/src/main.js --bundle --minify --outfile=public/gists/main.min.js",
+    "movies": "npm run movies:html && npm run movies:css && npm run movies:js",
+    "movies:html": "node movies/index.js",
+    "movies:css": "sass --no-source-map --style=compressed movies/src/styles.scss public/movies/styles.css",
+    "movies:js": "esbuild movies/src/main.js --bundle --minify --outfile=public/movies/main.min.js",
+    "dev:movies:js": "esbuild movies/src/main.js --bundle --outfile=public/movies/main.min.js --watch"
   },
   "type": "module",
   "repository": {

@@ -4,3 +4,4 @@ import * as fs from 'fs';
 fs.mkdir(`./public`, () => {});
 fs.mkdir(`./public/reviews`, () => {});
 fs.mkdir(`./public/gists`, () => {});
+fs.mkdir(`./public/movies`, () => {});
