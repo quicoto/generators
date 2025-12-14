@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name=”robots” content=”noindex, nofollow”>
-  <title>Gists Generator</title>
-  <meta name="description" content="Generate a markdown file for my reviews"./>
+  <meta name="robots" content="noindex, nofollow">
+  <title>Movie Review Generator</title>
+  <meta name="description" content="Generate a markdown file for my movie reviews"./>
   <link rel="stylesheet" href="./styles.css?ver=5.0.1">
 
   <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
@@ -23,7 +23,7 @@
   <header>
     <div class="container">
       <h1>
-        Gists Generator
+        Movie Review Generator
       </h1>
     </div>
   </header>
@@ -31,28 +31,24 @@
     <div class="container">
         <form>
           <div class="row">
-            <label for="Season" class="form-label">Title</label>
+            <label for="title" class="form-label">Movie Title</label>
             <input type="text" class="form-control" id="title" name="title" required>
           </div>
 
           <div class="row">
-            <label for="tags" class="form-label">#Tags (space separated)</label>
-            <input type="input" class="form-control" id="tags" name="tags" required>
+            <label for="rating" class="form-label">Rating</label>
+            <select class="form-select" id="rating" name="rating">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option selected="" value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
           </div>
 
           <div class="row">
-            <label for="description" class="form-label">Description</label>
-            <textarea class="form-control" id="description" rows="3" name="description"></textarea>
-          </div>
-
-          <div class="row">
-            <label for="language" class="form-label">Language highlight (eg: 'html')</label>
-            <input type="text" class="form-control" id="language" name="language" required>
-          </div>
-
-          <div class="row">
-            <label for="code" class="form-label">Code</label>
-            <textarea class="form-control" id="code" rows="5" name="code"></textarea>
+            <label for="comment" class="form-label">Comment</label>
+            <textarea class="form-control" id="comment" rows="3" name="comment"></textarea>
           </div>
 
           <button type="submit" class="btn">Copy</button>
@@ -61,7 +57,7 @@
   </main>
   <footer>
     <div class="container">
-      With ❤️ from <a href="https://ricard.blog/" title="Ricard Torres Blog">Ricard Torres</a> | <a href="https://github.com/quicoto/generators">Github</a>
+      With ❤️ from <a href="https://ricard.blog/" title="Ricard Torres Blog">Ricard Torres</a> | <a href="https://github.com/quicoto/reviews/tree/master/content/blog/movies">Github</a>
     </div>
   </footer>
 </body>
