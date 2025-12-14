@@ -1,12 +1,12 @@
 {
   "name": "generators",
-  "version": "4.0.0",
+  "version": "5.0.1",
   "lockfileVersion": 2,
   "requires": true,
   "packages": {
     "": {
       "name": "generators",
-      "version": "4.0.0",
+      "version": "5.0.1",
       "license": "MIT",
       "dependencies": {
         "@sindresorhus/slugify": "3.0.0",

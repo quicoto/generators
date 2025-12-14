@@ -1,15 +1,13 @@
 import fs from 'fs-extra';
 
 export function createFile(fileName, data) {
-  fs.writeFile(fileName, data, (err) => {
-    if (!err) {
-      const targetContent = fs.readFileSync(fileName, 'utf-8');
+  fs.ensureFileSync(fileName);
+  fs.writeFileSync(fileName, data);
+  const targetContent = fs.readFileSync(fileName, 'utf-8');
 
-      console.log('File created: ' + fileName);
+  console.log('File created: ' + fileName);
 
-      fs.writeFileSync(fileName, targetContent.replaceAll('%VERSION%', process.env.npm_package_version));
-    }
-  });
+  fs.writeFileSync(fileName, targetContent.replaceAll('%VERSION%', process.env.npm_package_version));
 }
 
 export function readFile(path) {

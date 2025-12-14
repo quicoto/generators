@@ -1,6 +1,6 @@
 {
   "name": "generators",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Easy copy and paste reviews for my Reviews site",
   "main": "main.js",
   "scripts": {
